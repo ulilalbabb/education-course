@@ -2,19 +2,21 @@ import { useState } from "react"
 import Button from "../Elements/Button/Button"
 import { Link } from "react-router"
 import { toast } from "react-toastify"
+import { useNavigate } from "react-router-dom"
 
 const FormLogin = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const navigate = useNavigate();
+
     const handleLogin = (e) => {
         e.preventDefault();
 
         const storeUser = JSON.parse(localStorage.getItem('userData'));
-
         if(storeUser){
             if(storeUser.email === email && storeUser.password === password){
                 localStorage.setItem('isLogin', true);
-                return toast.success('Login berhasil', {
+                toast.success('Login berhasil', {
                     position: "top-right",
                     autoClose: 5000,
                     hideProgressBar: false,
@@ -23,8 +25,9 @@ const FormLogin = () => {
                     draggable: true,
                     progress: undefined,
                 });
+                navigate("/homepage");
             } else {
-                return toast.error('Password atau email salah', {
+                toast.error('Password atau email salah', {
                     position: "top-right",
                     autoClose: 5000,
                     hideProgressBar: false,
@@ -35,7 +38,7 @@ const FormLogin = () => {
                 });
             }
         } else {
-            return toast.error('Daftar terlebih dahulu', {
+            toast.error('Daftar terlebih dahulu', {
                 position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: false,
