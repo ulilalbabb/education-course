@@ -93,7 +93,7 @@ const CardLayouts = () => {
     },
 ]
 return (
-    <div className="bg-primary px-5 py-5 md:px-10 md:py-10 lg:w-full lg:px-28">
+    <div className="bg-primary px-5 py-5 md:px-10 md:py-5 lg:w-full lg:px-28">
         <h1 className="font-bold text-2xl pt-2">
             Koleksi Video <br />Pembelajaran Unggulan
         </h1>
