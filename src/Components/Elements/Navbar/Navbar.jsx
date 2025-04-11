@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { IoIosLogOut } from 'react-icons/io';
 import { CgProfile } from "react-icons/cg";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +15,11 @@ const Navbar = () => {
       <div className="flex justify-between items-center">
         <div className="text-amber-500 text-xl">videobelajar</div>
         <div className="relative flex gap-10">
-        <p className='hidden lg:block md:block cursor-pointer hover:duration-200 hover:text-amber-500'>Kategori</p>
+        <p className='hidden lg:block md:block cursor-pointer hover:duration-200 hover:text-amber-500'>
+          <Link to='/collection'>
+            Kategori
+          </Link>
+        </p>
           <button
             onClick={toggleDropdown}
             className=" focus:outline-none"
