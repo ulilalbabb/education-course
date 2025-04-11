@@ -1,7 +1,7 @@
 const Card = (props) => {
     const { image, title, description, rating, price, name, position } = props
     return (
-        <div className="lg:w-[390px] lg:h-[430px] md:w-[100%] md:h-[235px] bg-white border border-gray-200 px-5 py-5 rounded-2xl">
+        <div className="lg:w-[420px] lg:h-[440px] md:w-[100%] md:h-[235px] bg-white border border-gray-200 px-5 py-5 rounded-2xl">
             <div className="flex gap-3 md:flex lg:flex-col">
                 <img src={image} alt="" className="w-1/2 md:w-1/2 lg:w-full hover:scale-105 transition duration-500"/>
                 <div className="flex flex-col gap-0.5">

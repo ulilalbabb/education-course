@@ -5,7 +5,7 @@ const Hero = () => {
         <div className="bg-primary">
             <div className="flex flex-col items-center ">
                 <div className="px-5 pt-10 md:pt-20 ">
-                    <img src="../assets/bg-hero.jpeg" alt="hero" className="h-[430px] md:h-[500px] lg:h-[400px] lg:w-[1200px] rounded-2xl brightness-20"/>
+                    <img src="../assets/bg-hero.jpeg" alt="hero" className="h-[430px] md:h-[500px] lg:h-[400px] lg:w-[1300px] rounded-2xl brightness-20"/>
                 </div>
                 <div className="flex flex-col items-center gap-5 md:gap-7 px-5 py-15 md:px-10 md:py-22 lg:py-30 lg:px-40 absolute top-[10%]">
                     <h1 className="text-2xl md:text-5xl lg:text-5xl font-bold text-center px-3 text-white">

@@ -1,7 +1,7 @@
 const Cta = () => {
     return (
-        <div className="bg-primary relative flex flex-col items-center w-full px-5 py-7 md:px-10 md:py-10 lg:py-10 lg:px-20">
-            <img src="../assets/banner.jpeg" alt="banner" className="h-[430px] md:h-[500px] lg:h-[400px] lg:w-[1200px] rounded-md brightness-20"/>
+        <div className="bg-primary relative flex flex-col items-center w-full px-5 py-7 md:px-10 md:py-10 lg:py-10 lg:px-10">
+            <img src="../assets/banner.jpeg" alt="banner" className="h-[430px] md:h-[500px] lg:h-[400px] lg:w-[1300px] rounded-md brightness-20"/>
             <div className="flex flex-col items-center gap-3 md:gap-5 lg:gap-2 absolute top-[20%] text-white px-8 lg:px-40 lg:py-10">    
                 <h1 className="text-xl md:text-2xl lg:text-xl ">
                     NEWSLETTER
