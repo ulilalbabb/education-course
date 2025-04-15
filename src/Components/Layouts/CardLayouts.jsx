@@ -1,4 +1,5 @@
 import Card from "../Fragments/Card"
+import { Link } from "react-router"
 
 const CardLayouts = () => {
     const Cards = [{
@@ -107,21 +108,23 @@ return (
                 <li className="hover:underline hover:text-amber-500 font-semibold cursor-pointer">Desain</li>
             </ul>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5 pt-5 lg:gap-2">
-            {Cards.map((Cards) => (
-                <div key={Cards.id}>
-                    <Card
-                        image={Cards.image}
-                        title={Cards.title}
-                        description={Cards.description}
-                        rating={Cards.rating}
-                        price={Cards.price}
-                        name={Cards.name}
-                        position={Cards.position}
-                    />
-                </div>
-            ))}
-        </div>
+        <Link to={"/detail/:id"}>
+            <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5 pt-5 lg:gap-2">
+                {Cards.map((Cards) => (
+                    <div key={Cards.id}>
+                        <Card
+                            image={Cards.image}
+                            title={Cards.title}
+                            description={Cards.description}
+                            rating={Cards.rating}
+                            price={Cards.price}
+                            name={Cards.name}
+                            position={Cards.position}
+                        />
+                    </div>
+                ))}
+            </div>
+        </Link>
     </div>
 )
 }

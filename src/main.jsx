@@ -7,6 +7,7 @@ import Register from './pages/register'
 import Opening from './pages/opening'
 import Homepage from './pages/homepage'
 import Collection from './pages/collection'
+import DetailProducts from './pages/detailproducts'
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: '/collection',
     element: <Collection/>
+  },
+  {
+    path: '/detail/:id',
+    element: <DetailProducts/>
   }
 ])
 
