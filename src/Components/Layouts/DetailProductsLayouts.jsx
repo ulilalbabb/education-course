@@ -104,21 +104,22 @@ const DetailProductsLayouts = () => {
                 </p>
               </div>
             </div>
-            <div className="px-5 py-5">
+            
+            <div className="px-5">
               <div className="bg-white px-5 py-5 border border-gray-200 rounded-xl">
                 <h1 className="font-bold pb-4">Belajar bersama tutor professional</h1>
                 <div className="flex flex-col gap-5 lg:flex-row lg:gap-5">
                   <CardProfile
-                    image={<img src="../assets/profile-1.png" alt="profile" />}
+                    image={<img src="../assets/profileAvatar3.png" alt="profile" />}
                     name="Arshaka"
                     position="Kakak dari Kaluna"
                     description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam quibusdam culpa magni, officia accusantium eligendi voluptatem ducimus qui sapiente! Provident, consequuntur aliquid porro minus dolore ratione ipsam
                                 laborum cumque ad impedit ducimus voluptatem libero expedita voluptates id aut necessitatibus inventore ex at est facilis odio tempora architecto. Exercitationem, officiis nisi?"
                   />
                   <CardProfile
-                    image={<img src="../assets/profile-1.png" alt="profile" />}
-                    name="Arshaka"
-                    position="Kakak dari Kaluna"
+                    image={<img src="../assets/profileAvatar1.png" alt="profile" />}
+                    name="Kaluna"
+                    position="Adik dari Arshaka"
                     description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam quibusdam culpa magni, officia accusantium eligendi voluptatem ducimus qui sapiente! Provident, consequuntur aliquid porro minus dolore ratione ipsam
                                 laborum cumque ad impedit ducimus voluptatem libero expedita voluptates id aut necessitatibus inventore ex at est facilis odio tempora architecto. Exercitationem, officiis nisi?"
                   />
@@ -139,7 +140,37 @@ const DetailProductsLayouts = () => {
           </div>
         </div>
 
-        <div className="lg:w-2/3">
+        <div className="px-5 pb-5 lg:w-2/3">
+          <div className="bg-white px-5 py-5 border border-gray-200 rounded-xl">
+            <h1 className="font-bold pb-4">Rating dan Review</h1>
+              <div className="flex flex-col gap-5 lg:flex-row lg:gap-5">
+                <CardProfile
+                  image={<img src="../assets/profileAvatar3.png" alt="profile" />}
+                  name="Ulil"
+                  position="Suami dari Prima"
+                  description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam quibusdam culpa magni, officia accusantium eligendi voluptatem ducimus qui sapiente! Provident, consequuntur aliquid porro minus dolore ratione ipsam
+                            laborum cumque ad impedit ducimus voluptatem libero expedita voluptates id aut necessitatibus inventore ex at est facilis odio tempora architecto. Exercitationem, officiis nisi?"
+                  rating={<p>
+                            <span className="text-amber-500 pr-2">
+                              &#9733; &#9733; &#9733; &#9733; &#9733;
+                            </span>
+                          4 / 5
+                          </p>}
+                />
+                <CardProfile
+                  image={<img src="../assets/profileAvatar4.png" alt="profile" />}
+                  name="Prima"
+                  position="Istri dari Prima"
+                  description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam quibusdam culpa magni, officia accusantium eligendi voluptatem ducimus qui sapiente! Provident, consequuntur aliquid porro minus dolore ratione ipsam                                laborum cumque ad impedit ducimus voluptatem libero expedita voluptates id aut necessitatibus inventore ex at est facilis odio tempora architecto. Exercitationem, officiis nisi?"
+                  rating={<p>
+                            <span className="text-amber-500 pr-2">
+                              &#9733; &#9733; &#9733; &#9733; &#9733;
+                            </span>
+                          4 / 5
+                          </p>}
+                />
+              </div>
+          </div>    
         </div>
 
         <div className="px-5 py-3">

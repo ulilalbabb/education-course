@@ -7,7 +7,7 @@ import { SlGlobe } from "react-icons/sl";
 
 const CardBuy = () => {
     return (
-        <div className="w-full px-5 py-5 lg:w-1/2">
+        <div className="w-full px-5 pt-5 lg:w-1/2">
             <div className="bg-white px-5 py-3 border rounded-xl border-gray-100">
               <h1 className="font-bold">Gapai Karir Impianmu sebagai Seorang UI/UX Designer & Product Manager.</h1>
               <div className="flex justify-between pt-1">
