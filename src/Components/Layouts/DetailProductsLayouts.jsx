@@ -1,13 +1,8 @@
-import Button from "../Elements/Button/Button";
-import FinalCardProject from "../Fragments/FinalCardProject";
 import { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
-import { GrDocumentVerified, GrDocumentUser } from "react-icons/gr";
-import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
-import { MdEditDocument } from "react-icons/md";
-import { BsCameraVideo } from "react-icons/bs";
-import { SlGlobe } from "react-icons/sl";
 import Card from "../Fragments/Card";
+import CardBuy from "../Fragments/CardBuy.";
+import CardProfile from "../Elements/CardProfile/CardProfile";
 
 const DropdownLearning = ({title, options}) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +16,6 @@ const DropdownLearning = ({title, options}) => {
     setSelectedOption(option);
     setIsOpen(false);
   };
-
   return(
     <div className=" text-left">
       <div className=''>
@@ -110,58 +104,29 @@ const DetailProductsLayouts = () => {
                 </p>
               </div>
             </div>
-            <FinalCardProject title="Belajar bersama tutor professional"/>
-          </div>
-
-          <div className="w-full px-5 py-5 lg:w-1/2">
-            <div className="bg-white px-5 py-3 border rounded-xl border-gray-100">
-              <h1 className="font-bold">Gapai Karir Impianmu sebagai Seorang UI/UX Designer & Product Manager.</h1>
-              <div className="flex justify-between pt-1">
-                <div className="flex gap-2">
-                  <p className="font-bold text-green-500">Rp 250K</p>
-                  <p className="font-bold text-gray-300 line-through">Rp 600K</p>
+            <div className="px-5 py-5">
+              <div className="bg-white px-5 py-5 border border-gray-200 rounded-xl">
+                <h1 className="font-bold pb-4">Belajar bersama tutor professional</h1>
+                <div className="flex flex-col gap-5 lg:flex-row lg:gap-5">
+                  <CardProfile
+                    image={<img src="../assets/profile-1.png" alt="profile" />}
+                    name="Arshaka"
+                    position="Kakak dari Kaluna"
+                    description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam quibusdam culpa magni, officia accusantium eligendi voluptatem ducimus qui sapiente! Provident, consequuntur aliquid porro minus dolore ratione ipsam
+                                laborum cumque ad impedit ducimus voluptatem libero expedita voluptates id aut necessitatibus inventore ex at est facilis odio tempora architecto. Exercitationem, officiis nisi?"
+                  />
+                  <CardProfile
+                    image={<img src="../assets/profile-1.png" alt="profile" />}
+                    name="Arshaka"
+                    position="Kakak dari Kaluna"
+                    description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam quibusdam culpa magni, officia accusantium eligendi voluptatem ducimus qui sapiente! Provident, consequuntur aliquid porro minus dolore ratione ipsam
+                                laborum cumque ad impedit ducimus voluptatem libero expedita voluptates id aut necessitatibus inventore ex at est facilis odio tempora architecto. Exercitationem, officiis nisi?"
+                  />
                 </div>
-                <p className="rounded-xl text-white px-3 bg-amber-500">Diskon 60%</p>
-              </div>
-              <p className="text-gray-400 font-semibold py-2">Penawaran spesial tersisa 2 hari lagi!</p>
-              <div className="py-2">
-                <Button variant="bg-green-600 hover:bg-green-400 cursor-pointer text-white py-0.5 font-semibold w-full rounded-xl">Beli Sekarang</Button>
-              </div>
-              <p className="font-semibold py-2">Kelas ini sudah termasuk</p>
-              <div className="flex justify-between">
-                <div className="flex flex-col gap-2">
-                  <p className="flex gap-3 items-center">
-                    <GrDocumentVerified />
-                    Ujian Akhir
-                  </p>
-                  <p className="flex gap-3 items-center">
-                    <HiOutlineClipboardDocumentList />7 Dokumen
-                  </p>
-                  <p className="flex gap-3 items-center">
-                    <MdEditDocument />
-                    Pretest
-                  </p>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <p className="flex gap-3 items-center">
-                    <BsCameraVideo />
-                    49 Video
-                  </p>
-                  <p className="flex gap-3 items-center">
-                    <GrDocumentUser />
-                    Sertifikat
-                  </p>
-                </div>
-              </div>
-              <div className="pt-3">
-                <p className="font-bold pb-2">Bahasa Pengantar</p>
-                <p className="flex gap-3 items-center">
-                  <SlGlobe />
-                  Bahasa Indonesia
-                </p>
               </div>
             </div>
           </div>
+          <CardBuy></CardBuy>
         </div>
 
         <div className="px-5 py-5 lg:w-2/3">
@@ -175,7 +140,6 @@ const DetailProductsLayouts = () => {
         </div>
 
         <div className="lg:w-2/3">
-          <FinalCardProject title="Rating dan Review"/>
         </div>
 
         <div className="px-5 py-3">
