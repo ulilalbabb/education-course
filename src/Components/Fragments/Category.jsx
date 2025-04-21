@@ -54,7 +54,7 @@ const Category = () => {
       <div className="p-5">
         <div className="flex flex-col lg:flex-row lg:gap-10">
           {/* sidebar */}
-          <div className="lg:w-1/4 lg:h-full flex flex-col bg-white space-y-4 border border-gray-200 p-5">
+          <div className="lg:w-1/4 lg:h-full flex flex-col bg-white space-y-4 border rounded-md border-gray-200 p-5">
             <div className="flex justify-between">
               <p className="font-bold">Filter</p>
               <p className="text-red-500 font-bold">Reset</p>

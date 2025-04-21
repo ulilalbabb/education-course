@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import Card from "../Fragments/Card";
-import CardBuy from "../Fragments/CardBuy.";
+import CardBuy from "../Fragments/CardBuy";
 import CardProfile from "../Elements/CardProfile/CardProfile";
 
-const DropdownLearning = ({title, options}) => {
+const DropdownLearning = ({ title, options }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
 
@@ -16,21 +16,12 @@ const DropdownLearning = ({title, options}) => {
     setSelectedOption(option);
     setIsOpen(false);
   };
-  return(
+  return (
     <div className=" text-left">
-      <div className=''>
-        <button
-          onClick={toggleDropdown}
-          className="inline-flex justify-between w-full cursor-pointer shadow-sm px-4 py-2 text-sm font-medium hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-        >
+      <div className="">
+        <button onClick={toggleDropdown} className="inline-flex justify-between w-full cursor-pointer shadow-sm px-4 py-2 text-sm font-medium hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
           {selectedOption || title}
-          {
-            isOpen ? (
-              <FaChevronUp className="ml-2 -mr-1 h-5 w-5 text-green-500" aria-hidden="true" />
-            ) : (
-              <FaChevronDown className="ml-2 -mr-1 h-5 w-5 text-green-500" aria-hidden="true" />
-            )
-          }
+          {isOpen ? <FaChevronUp className="ml-2 -mr-1 h-5 w-5 text-green-500" aria-hidden="true" /> : <FaChevronDown className="ml-2 -mr-1 h-5 w-5 text-green-500" aria-hidden="true" />}
         </button>
       </div>
 
@@ -38,11 +29,7 @@ const DropdownLearning = ({title, options}) => {
         <div className="w-full rounded-md bg-white shadow-lg">
           <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
             {options.map((option) => (
-              <button
-                key={option}
-                onClick={() => handleOptionClick(option)}
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left border-b border-gray-200"
-              >
+              <button key={option} onClick={() => handleOptionClick(option)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left border-b border-gray-200">
                 {option}
               </button>
             ))}
@@ -50,14 +37,14 @@ const DropdownLearning = ({title, options}) => {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
 const DetailProductsLayouts = () => {
-  const learningOption1 = ['a1', 'bb']
-  const learningOption2 = ['a2', 'bb']
-  const learningOption3 = ['a3', 'bb']
-  const learningOption4 = ['a4', 'bb']
+  const learningOption1 = ["a1", "bb"];
+  const learningOption2 = ["a2", "bb"];
+  const learningOption3 = ["a3", "bb"];
+  const learningOption4 = ["a4", "bb"];
 
   return (
     <>
@@ -93,8 +80,10 @@ const DetailProductsLayouts = () => {
           </div>
         </div>
 
+        {/* Content */}
         <div className="flex flex-col-reverse lg:flex-row">
           <div className="lg:w-full">
+            {/* description */}
             <div className="px-5 py-5 ">
               <div className="bg-white px-5 py-5 border border-gray-200 rounded-xl">
                 <h1 className="font-bold pb-4">Deskripsi</h1>
@@ -104,7 +93,8 @@ const DetailProductsLayouts = () => {
                 </p>
               </div>
             </div>
-            
+
+            {/* tutor */}
             <div className="px-5">
               <div className="bg-white px-5 py-5 border border-gray-200 rounded-xl">
                 <h1 className="font-bold pb-4">Belajar bersama tutor professional</h1>
@@ -127,62 +117,60 @@ const DetailProductsLayouts = () => {
               </div>
             </div>
           </div>
+          {/* Card Buy */}
           <CardBuy></CardBuy>
         </div>
 
+        {/* Learning */}
         <div className="px-5 py-5 lg:w-2/3">
           <div className="bg-white px-5 py-5 border border-gray-200 rounded-xl flex flex-col gap-3">
             <h1 className="font-bold">Kamu akan mempelajari</h1>
-            <DropdownLearning title="Introduction to Course 1: Foundations of User Experience Design" options={learningOption1}/>
-            <DropdownLearning title="Universal Design, inclusive design, and equity-focused design" options={learningOption2}/>
-            <DropdownLearning title="Introduction to design sprints" options={learningOption3}/>
-            <DropdownLearning title="Introduction to UX research" options={learningOption4}/>
+            <DropdownLearning title="Introduction to Course 1: Foundations of User Experience Design" options={learningOption1} />
+            <DropdownLearning title="Universal Design, inclusive design, and equity-focused design" options={learningOption2} />
+            <DropdownLearning title="Introduction to design sprints" options={learningOption3} />
+            <DropdownLearning title="Introduction to UX research" options={learningOption4} />
           </div>
         </div>
 
+        {/* Review */}
         <div className="px-5 pb-5 lg:w-2/3">
           <div className="bg-white px-5 py-5 border border-gray-200 rounded-xl">
             <h1 className="font-bold pb-4">Rating dan Review</h1>
-              <div className="flex flex-col gap-5 lg:flex-row lg:gap-5">
-                <CardProfile
-                  image={<img src="../assets/profileAvatar3.png" alt="profile" />}
-                  name="Ulil"
-                  position="Suami dari Prima"
-                  description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam quibusdam culpa magni, officia accusantium eligendi voluptatem ducimus qui sapiente! Provident, consequuntur aliquid porro minus dolore ratione ipsam
+            <div className="flex flex-col gap-5 lg:flex-row lg:gap-5">
+              <CardProfile
+                image={<img src="../assets/profileAvatar3.png" alt="profile" />}
+                name="Ulil"
+                position="Suami dari Prima"
+                description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam quibusdam culpa magni, officia accusantium eligendi voluptatem ducimus qui sapiente! Provident, consequuntur aliquid porro minus dolore ratione ipsam
                             laborum cumque ad impedit ducimus voluptatem libero expedita voluptates id aut necessitatibus inventore ex at est facilis odio tempora architecto. Exercitationem, officiis nisi?"
-                  rating={<p>
-                            <span className="text-amber-500 pr-2">
-                              &#9733; &#9733; &#9733; &#9733; &#9733;
-                            </span>
-                          4 / 5
-                          </p>}
-                />
-                <CardProfile
-                  image={<img src="../assets/profileAvatar4.png" alt="profile" />}
-                  name="Prima"
-                  position="Istri dari Prima"
-                  description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam quibusdam culpa magni, officia accusantium eligendi voluptatem ducimus qui sapiente! Provident, consequuntur aliquid porro minus dolore ratione ipsam                                laborum cumque ad impedit ducimus voluptatem libero expedita voluptates id aut necessitatibus inventore ex at est facilis odio tempora architecto. Exercitationem, officiis nisi?"
-                  rating={<p>
-                            <span className="text-amber-500 pr-2">
-                              &#9733; &#9733; &#9733; &#9733; &#9733;
-                            </span>
-                          4 / 5
-                          </p>}
-                />
-              </div>
-          </div>    
+                rating={
+                  <p>
+                    <span className="text-amber-500 pr-2">&#9733; &#9733; &#9733; &#9733; &#9733;</span>4 / 5
+                  </p>
+                }
+              />
+              <CardProfile
+                image={<img src="../assets/profileAvatar4.png" alt="profile" />}
+                name="Prima"
+                position="Istri dari Prima"
+                description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam quibusdam culpa magni, officia accusantium eligendi voluptatem ducimus qui sapiente! Provident, consequuntur aliquid porro minus dolore ratione ipsam                                laborum cumque ad impedit ducimus voluptatem libero expedita voluptates id aut necessitatibus inventore ex at est facilis odio tempora architecto. Exercitationem, officiis nisi?"
+                rating={
+                  <p>
+                    <span className="text-amber-500 pr-2">&#9733; &#9733; &#9733; &#9733; &#9733;</span>4 / 5
+                  </p>
+                }
+              />
+            </div>
+          </div>
         </div>
 
+        {/* Related Video */}
         <div className="px-5 py-3">
-            <h1 className="font-bold text-2xl">
-              Video Pembelajaran Terkait Lainnya
-            </h1>
-            <p>
-              Ekpansi Pengetahuan Anda Dengan Rekomendasi Spesial Kami!
-            </p>
+          <h1 className="font-bold text-2xl">Video Pembelajaran Terkait Lainnya</h1>
+          <p>Ekpansi Pengetahuan Anda Dengan Rekomendasi Spesial Kami!</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5 py-2 px-5 lg:pb-10 lg:gap-2">
-            <Card></Card>
+          <Card></Card>
         </div>
       </div>
     </>
