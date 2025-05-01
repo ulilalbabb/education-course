@@ -16,11 +16,11 @@ const Dropdown = ({ title, options }) => {
   };
 
   return (
-    <div className=" text-left">
-      <div className="">
+    <div>
+      <div>
         <button
           onClick={toggleDropdown}
-          className="inline-flex justify-between w-full cursor-pointer` rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          className="inline-flex justify-between items-center w-full cursor-pointer rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm md:text-lg font-medium hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
         >
           {selectedOption || title}
           {isOpen ? <FaChevronUp className="ml-2 -mr-1 h-5 w-5 text-green-500" aria-hidden="true" /> : <FaChevronDown className="ml-2 -mr-1 h-5 w-5 text-green-500" aria-hidden="true" />}
@@ -31,7 +31,7 @@ const Dropdown = ({ title, options }) => {
         <div className="mt-2 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg">
           <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
             {options.map((option) => (
-              <button key={option} onClick={() => handleOptionClick(option)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left border-b border-gray-200">
+              <button key={option} onClick={() => handleOptionClick(option)} className="block px-4 py-2 text-sm md:text-lg text-gray-700 hover:bg-gray-100 w-full text-left">
                 {option}
               </button>
             ))}
@@ -56,7 +56,7 @@ const Category = () => {
           {/* sidebar */}
           <div className="lg:w-1/4 lg:h-full flex flex-col bg-white space-y-4 border rounded-md border-gray-200 p-5">
             <div className="flex justify-between">
-              <p className="font-bold">Filter</p>
+              <p className="font-bold md:text-xl">Filter</p>
               <p className="text-red-500 font-bold">Reset</p>
             </div>
             <Dropdown title="Bidang Studi" options={options1} />

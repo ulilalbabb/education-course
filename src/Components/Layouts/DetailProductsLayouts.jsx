@@ -19,7 +19,10 @@ const DropdownLearning = ({ title, options }) => {
   return (
     <div className=" text-left">
       <div className="">
-        <button onClick={toggleDropdown} className="inline-flex justify-between w-full cursor-pointer shadow-sm px-4 py-2 text-sm font-medium hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        <button
+          onClick={toggleDropdown}
+          className="inline-flex justify-between w-full cursor-pointer shadow-sm px-4 py-2 text-sm md:text-lg font-medium hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+        >
           {selectedOption || title}
           {isOpen ? <FaChevronUp className="ml-2 -mr-1 h-5 w-5 text-green-500" aria-hidden="true" /> : <FaChevronDown className="ml-2 -mr-1 h-5 w-5 text-green-500" aria-hidden="true" />}
         </button>
@@ -29,7 +32,7 @@ const DropdownLearning = ({ title, options }) => {
         <div className="w-full rounded-md bg-white shadow-lg">
           <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
             {options.map((option) => (
-              <button key={option} onClick={() => handleOptionClick(option)} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 w-full text-left border-b border-gray-200">
+              <button key={option} onClick={() => handleOptionClick(option)} className="block px-4 py-2 text-sm md:text-lg text-gray-700 hover:bg-gray-100 w-full text-left border-b border-gray-200">
                 {option}
               </button>
             ))}
@@ -66,10 +69,10 @@ const DetailProductsLayouts = () => {
         {/* Hero */}
         <div className="relative">
           <div className="flex flex-col items-center">
-            <div className="px-5 pt-2 md:pt-20 lg:pt-5">
-              <img src="../assets/bg-hero.jpeg" alt="hero" className="h-[430px] md:h-[500px] lg:h-[400px] lg:w-[1320px] rounded-2xl brightness-20" />
+            <div className="px-5 pt-2 md:pt-10 lg:pt-5">
+              <img src="../assets/bg-hero.jpeg" alt="hero" className="h-[430px] md:h-[500px] md:w-[1000px] lg:h-[400px] lg:w-[1320px] rounded-2xl brightness-20" />
             </div>
-            <div className="gap-5 md:gap-7 px-5 py-15 md:px-10 md:py-22 lg:py-25 lg:px-40 absolute top-[10%]">
+            <div className="gap-5 md:gap-7 px-5 py-15 md:px-10 md:pt-25 lg:py-25 lg:px-40 absolute top-[10%]">
               <h1 className="text-2xl md:text-5xl lg:text-5xl font-bold px-3 text-white">Gapai Karir Impianmu sebagai Seorang UI/UX Designer & Product Manager.</h1>
               <p className="md:text-xl text-white px-3 py-4">Belajar bersama tutor professional di Video Course. Kapanpun, di manapun.</p>
               <p className="md:text-xl text-white px-3">
@@ -86,8 +89,8 @@ const DetailProductsLayouts = () => {
             {/* description */}
             <div className="px-5 py-5 ">
               <div className="bg-white px-5 py-5 border border-gray-200 rounded-xl">
-                <h1 className="font-bold pb-4">Deskripsi</h1>
-                <p>
+                <h1 className="font-bold pb-4 md:text-xl">Deskripsi</h1>
+                <p className="md:text-lg">
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam quibusdam culpa magni, officia accusantium eligendi voluptatem ducimus qui sapiente! Provident, consequuntur aliquid porro minus dolore ratione ipsam
                   laborum cumque ad impedit ducimus voluptatem libero expedita voluptates id aut necessitatibus inventore ex at est facilis odio tempora architecto. Exercitationem, officiis nisi?
                 </p>
@@ -97,7 +100,7 @@ const DetailProductsLayouts = () => {
             {/* tutor */}
             <div className="px-5">
               <div className="bg-white px-5 py-5 border border-gray-200 rounded-xl">
-                <h1 className="font-bold pb-4">Belajar bersama tutor professional</h1>
+                <h1 className="font-bold pb-4 md:text-xl">Belajar bersama tutor professional</h1>
                 <div className="flex flex-col gap-5 lg:flex-row lg:gap-5">
                   <CardProfile
                     image={<img src="../assets/profileAvatar3.png" alt="profile" />}
@@ -124,7 +127,7 @@ const DetailProductsLayouts = () => {
         {/* Learning */}
         <div className="px-5 py-5 lg:w-2/3">
           <div className="bg-white px-5 py-5 border border-gray-200 rounded-xl flex flex-col gap-3">
-            <h1 className="font-bold">Kamu akan mempelajari</h1>
+            <h1 className="font-bold md:text-xl">Kamu akan mempelajari</h1>
             <DropdownLearning title="Introduction to Course 1: Foundations of User Experience Design" options={learningOption1} />
             <DropdownLearning title="Universal Design, inclusive design, and equity-focused design" options={learningOption2} />
             <DropdownLearning title="Introduction to design sprints" options={learningOption3} />
@@ -135,7 +138,7 @@ const DetailProductsLayouts = () => {
         {/* Review */}
         <div className="px-5 pb-5 lg:w-2/3">
           <div className="bg-white px-5 py-5 border border-gray-200 rounded-xl">
-            <h1 className="font-bold pb-4">Rating dan Review</h1>
+            <h1 className="font-bold pb-4 md:text-xl">Rating dan Review</h1>
             <div className="flex flex-col gap-5 lg:flex-row lg:gap-5">
               <CardProfile
                 image={<img src="../assets/profileAvatar3.png" alt="profile" />}

@@ -4,6 +4,7 @@ import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
 import { MdEditDocument } from "react-icons/md";
 import { BsCameraVideo } from "react-icons/bs";
 import { SlGlobe } from "react-icons/sl";
+import { Link } from "react-router";
 
 const CardBuy = () => {
   return (
@@ -19,7 +20,9 @@ const CardBuy = () => {
         </div>
         <p className="text-gray-400 font-semibold py-2">Penawaran spesial tersisa 2 hari lagi!</p>
         <div className="py-2">
-          <Button variant="bg-green-600 hover:bg-green-400 cursor-pointer text-white py-0.5 font-semibold w-full rounded-xl">Beli Sekarang</Button>
+          <Button variant="bg-green-600 hover:bg-green-400 cursor-pointer text-white py-0.5 font-semibold w-full rounded-xl">
+            <Link to={"/payment"}>Beli Sekarang</Link>
+          </Button>
         </div>
         <p className="font-semibold py-2">Kelas ini sudah termasuk</p>
         <div className="flex justify-between">
