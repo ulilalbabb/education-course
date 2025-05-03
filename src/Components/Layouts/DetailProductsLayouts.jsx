@@ -62,7 +62,7 @@ const DetailProductsLayouts = () => {
           </a>
           <p>/</p>
           <a href="#" className="hover:text-amber-500">
-            Gapai Karir Impianmu .
+            Gapai Karir Impianmu
           </a>
         </div>
 
@@ -91,8 +91,8 @@ const DetailProductsLayouts = () => {
               <div className="bg-white px-5 py-5 border border-gray-200 rounded-xl">
                 <h1 className="font-bold pb-4 md:text-xl">Deskripsi</h1>
                 <p className="md:text-lg">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam quibusdam culpa magni, officia accusantium eligendi voluptatem ducimus qui sapiente! Provident, consequuntur aliquid porro minus dolore ratione ipsam
-                  laborum cumque ad impedit ducimus voluptatem libero expedita voluptates id aut necessitatibus inventore ex at est facilis odio tempora architecto. Exercitationem, officiis nisi?
+                  UI&UX Designer & Product Manager merupakan profesi yang sangat menarik dan memiliki banyak kesempatan untuk menambah wawasan dan pengalaman di bidang tersebut. Tidak hanya itu, Anda juga dapat belajar cara membuat desain
+                  yang menarik dan interaktif. Tingkatkan kemampuan Anda sebagai UI&UX Designer & Product Manager melalui Video Course.
                 </p>
               </div>
             </div>
